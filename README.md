@@ -25,3 +25,5 @@ import firebase_core, cloud_firestore, firebase_auth, firebase_ui_auth
 
 ที่ android/app/build.gradle
 ```
+
+dart fix --apply // clear `ฟ้าๆ`
