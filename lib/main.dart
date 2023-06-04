@@ -1,10 +1,12 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 import 'const.dart';
 import 'firebase_options.dart';
 import 'pages/home.dart';
+import 'pages/landscape/home.dart';
 import 'pages/sign_in.dart';
 // firebase_core, cloud_firestore, firebase_auth, firebase_ui_auth
 
@@ -51,7 +53,10 @@ class MyApp extends StatelessWidget {
         builder: (BuildContext context, AsyncSnapshot<User?> snapshot) {
           if (snapshot.data != null) {
             // homepage
-            return const HomePage();
+            return OrientationLayoutBuilder(
+              portrait: (context) => const HomePage(),
+              landscape: (context) => const LandPage(),
+            );
           }
 
           // signin
