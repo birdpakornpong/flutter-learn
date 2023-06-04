@@ -1,3 +1,4 @@
+import 'package:app_example/pages/gethttp.dart';
 import 'package:app_example/pages/product.dart';
 import 'package:app_example/pages/quiz.dart';
 import 'package:firebase_ui_auth/firebase_ui_auth.dart';
@@ -25,7 +26,7 @@ class _HomePageState extends State<HomePage> {
         children: [
           const Product(),
           const Quiz(),
-          Container(color: Colors.green),
+          GetHttp(),
           Container(color: Colors.pink)
         ],
       ),
